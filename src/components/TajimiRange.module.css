@@ -1,0 +1,151 @@
+.tajimiSection {
+  background-color: #fff;
+}
+
+.header {
+  padding: 60px 40px 40px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header h2 {
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.header h2 sup {
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 600px;
+}
+
+.leftCol {
+  padding: 40px;
+  border-right: 1px solid #eaeaea;
+}
+
+.leftCol p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  max-width: 80%;
+}
+
+.shopBtn {
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.shopBtn:hover {
+  background-color: #e0e0e0;
+}
+
+.centerCol {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader h3 {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 5px;
+}
+
+.cardHeader p {
+  font-size: 11px;
+  color: #666;
+}
+
+.imageContainer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.productImage {
+  object-fit: contain;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.thumb:hover {
+  transform: scale(1.1);
+}
+
+.thumbActive {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #1a1a1a;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.addToCart {
+  cursor: pointer;
+}
+
+.addToCart:hover {
+  text-decoration: underline;
+}
+
+.rightCol {
+  position: relative;
+  background-color: #000;
+}
+
+.lifestyleImage {
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .rightCol {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .leftCol {
+    border-right: none;
+    border-bottom: 1px solid #eaeaea;
+  }
+}

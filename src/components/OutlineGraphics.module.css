@@ -1,0 +1,32 @@
+.graphicsSection {
+  padding: 120px 40px;
+  background-color: #fafafa;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.svgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.icon {
+  width: 150px;
+  height: 150px;
+}
+
+.iconLarge {
+  width: 250px;
+  height: 250px;
+}
+
+@media (max-width: 768px) {
+  .svgContainer {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
