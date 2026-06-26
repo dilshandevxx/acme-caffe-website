@@ -19,6 +19,12 @@
 .heroImage {
   object-fit: cover;
   object-position: center;
+  animation: slowZoom 20s ease-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
 }
 
 .overlay {
@@ -48,33 +54,44 @@
   color: #000;
   letter-spacing: -2px;
   margin-top: 20px;
-  text-shadow: 0 10px 30px rgba(255,255,255,0.2);
+  text-shadow: 0 15px 40px rgba(255,255,255,0.4);
 }
 
 .heroCard {
   align-self: flex-end;
-  max-width: 400px;
+  max-width: 450px;
   margin-bottom: 20px;
+}
+
+.glassContainer {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .heroCard h2 {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(20px, 2.5vw, 28px);
+  font-size: clamp(24px, 3vw, 32px);
   font-weight: 500;
   color: #fff;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   line-height: 1.2;
   text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
 
 .exploreBtn {
-  background-color: #000;
-  color: #fff;
-  padding: 16px 28px;
+  background-color: #fff;
+  color: #000;
+  padding: 16px 32px;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  border-radius: 30px;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   display: inline-flex;
   align-items: center;
@@ -82,8 +99,36 @@
 
 .exploreBtn:hover {
   background-color: var(--accent-color);
-  transform: translateX(8px);
-  box-shadow: -4px 4px 15px rgba(0,0,0,0.2);
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.animateFadeUp {
+  animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.animateFadeLeft {
+  animation: fadeLeft 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 768px) {

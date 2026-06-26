@@ -19,11 +19,13 @@ export default function HeroSection() {
       </div>
 
       <div className={styles.heroContent}>
-        <h1 className={`${styles.brandName} brand-font`}>ACME</h1>
+        <h1 className={`${styles.brandName} brand-font ${styles.animateFadeUp}`}>ACME</h1>
         
-        <div className={styles.heroCard}>
-          <h2>Meet the new Tall and<br/>Short tumblers</h2>
-          <button className={styles.exploreBtn}>EXPLORE MORE &rarr;</button>
+        <div className={`${styles.heroCard} ${styles.animateFadeLeft}`}>
+          <div className={styles.glassContainer}>
+            <h2>Meet the new Tall and<br/>Short tumblers</h2>
+            <button className={styles.exploreBtn}>EXPLORE MORE &rarr;</button>
+          </div>
         </div>
       </div>
     </section>
